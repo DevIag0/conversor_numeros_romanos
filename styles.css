@@ -1,0 +1,185 @@
+/* Reset básico para eliminar margens e paddings padrões dos navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Estilo do corpo da página com fundo claro e texto escuro */
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container principal centralizado com largura máxima definida */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Título principal centralizado */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+/* Subtítulos com cor azul para destacar */
+h2 {
+    color: #3498db;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* Caixa principal do conversor com sombra e cantos arredondados */
+.converter-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* Sistema de abas para alternar entre conversões */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #eee;
+    margin-bottom: 20px;
+}
+
+/* Estilo individual de cada aba */
+.tab {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #7f8c8d;
+    transition: all 0.3s ease;
+}
+
+/* Estilo da aba ativa/selecionada */
+.tab.active {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    font-weight: bold;
+}
+
+/* Containers dos formulários (inicialmente ocultos) */
+.form-container {
+    display: none;
+    padding: 10px;
+}
+
+/* Container do formulário ativo */
+.form-container.active {
+    display: block;
+}
+
+/* Grupo de entrada de dados */
+.input-group {
+    margin-bottom: 15px;
+}
+
+/* Estilo para os labels dos campos */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Estilo para os campos de entrada */
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Estilo para os botões de conversão */
+.convert-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+/* Efeito hover nos botões */
+.convert-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Área de resultado da conversão */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px dashed #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    font-size: 1.2rem;
+}
+
+/* Destaque para o resultado da conversão */
+#romanOutput, #decimalOutput {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Caixa de informações sobre números romanos */
+.info-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Container da tabela com scroll horizontal quando necessário */
+.table-container {
+    overflow-x: auto;
+}
+
+/* Estilo da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Células da tabela */
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Cabeçalho da tabela */
+th {
+    background-color: #f2f2f2;
+}
+
+/* Responsividade para telas pequenas */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+    
+    /* Abas em coluna para telas menores */
+    .tabs {
+        flex-direction: column;
+    }
+    
+    .tab {
+        border-bottom: 1px solid #eee;
+    }
+    
+    .tab.active {
+        border-bottom: 1px solid #3498db;
+    }
+}

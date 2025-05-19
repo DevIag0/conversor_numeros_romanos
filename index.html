@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Números Romanos</title>
+    <!-- Link para o arquivo de estilos CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Container principal que centraliza e limita a largura do conteúdo -->
+    <div class="container">
+        <!-- Título principal da página -->
+        <h1>Conversor de Números Romanos</h1>
+        
+        <!-- Caixa do conversor que contém as abas e formulários -->
+        <div class="converter-box">
+            <!-- Sistema de abas para alternar entre os tipos de conversão -->
+            <div class="tabs">
+                <button id="decimalToRoman" class="tab active">Decimal → Romano</button>
+                <button id="romanToDecimal" class="tab">Romano → Decimal</button>
+            </div>
+            
+            <!-- Formulário para converter decimal para romano (ativo por padrão) -->
+            <div id="decimalToRomanForm" class="form-container active">
+                <h2>Converter Decimal para Romano</h2>
+                <div class="input-group">
+                    <label for="decimalInput">Número Decimal (1-3999):</label>
+                    <!-- Limite de 3999 pois é o máximo representável com símbolos romanos tradicionais -->
+                    <input type="number" id="decimalInput" min="1" max="3999">
+                </div>
+                <button id="convertToRoman" class="convert-btn">Converter</button>
+                <!-- Área onde o resultado será exibido -->
+                <div class="result" id="romanResult">
+                    <span>Resultado: </span>
+                    <span id="romanOutput"></span>
+                </div>
+            </div>
+            
+            <!-- Formulário para converter romano para decimal (inicialmente oculto) -->
+            <div id="romanToDecimalForm" class="form-container">
+                <h2>Converter Romano para Decimal</h2>
+                <div class="input-group">
+                    <label for="romanInput">Número Romano:</label>
+                    <input type="text" id="romanInput" placeholder="Ex: MCMXCIV">
+                </div>
+                <button id="convertToDecimal" class="convert-btn">Converter</button>
+                <!-- Área onde o resultado será exibido -->
+                <div class="result" id="decimalResult">
+                    <span>Resultado: </span>
+                    <span id="decimalOutput"></span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Caixa de informações sobre símbolos romanos -->
+        <div class="info-box">
+            <h2>Tabela de Símbolos Romanos</h2>
+            <div class="table-container">
+                <!-- Tabela com símbolos romanos e seus valores correspondentes -->
+                <table>
+                    <tr>
+                        <th>Símbolo</th>
+                        <th>Valor</th>
+                    </tr>
+                    <tr><td>I</td><td>1</td></tr>
+                    <tr><td>V</td><td>5</td></tr>
+                    <tr><td>X</td><td>10</td></tr>
+                    <tr><td>L</td><td>50</td></tr>
+                    <tr><td>C</td><td>100</td></tr>
+                    <tr><td>D</td><td>500</td></tr>
+                    <tr><td>M</td><td>1000</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- Link para o arquivo JavaScript que contém a lógica de conversão -->
+    <script src="script.js"></script>
+</body>
+</html>
